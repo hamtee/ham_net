@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: fr.hamtee.tennisScore.manager.MatchManagerTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 sec
