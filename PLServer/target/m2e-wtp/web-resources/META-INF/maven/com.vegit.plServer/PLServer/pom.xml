@@ -96,7 +96,7 @@
     	<dependency>
     		<groupId>org.hibernate.ogm</groupId>
     		<artifactId>hibernate-ogm-mongodb</artifactId>
-    		<version>5.0.2.Final</version><!--$NO-MVN-MAN-VER$-->
+    		<version>5.0.2.Final</version>
 		</dependency>
     	
     	<dependency>
@@ -105,21 +105,10 @@
 		</dependency>
 		
 		<dependency>
-        	<groupId>org.hibernate.ogm</groupId>
-        	<artifactId>hibernate-ogm-neo4j</artifactId>
-    	</dependency>
-    	
-    	<dependency>
-        	<groupId>org.jboss.jbossts</groupId>
-        	<artifactId>jbossjta</artifactId>
-        	 <version>4.16.4.Final</version>
-    	</dependency>
-		
-		<dependency>
     		<groupId>com.github.fakemongo</groupId>
     		<artifactId>fongo</artifactId>
     		<scope>test</scope>
-    		<version>2.0.7</version><!--$NO-MVN-MAN-VER$-->
+    		<version>2.0.7</version>
 		</dependency>
 		
 		<dependency>

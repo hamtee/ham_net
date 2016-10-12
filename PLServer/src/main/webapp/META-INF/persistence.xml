@@ -31,23 +31,11 @@
         <!-- Use the Hibernate OGM provider: configuration will be transparent -->
         <provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
         <properties>
-            <!-- noSql Fongodb node-->
-                       
-            <property name="hibernate.ogm.datastore.provider" value="fongo"/>
-            <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossStandAloneJtaPlatform"/>
-            <property name="hibernate.ogm.datastore.database" value="PLServerDB"/>
-            <property name="hibernate.ogm.datastore.create_database" value="true"/>
-        
-        </properties>
-    </persistence-unit>
-    
-    <persistence-unit name="neo4j-ogm-jpa-plserver" transaction-type="RESOURCE_LOCAL">
-        <provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
-
-        <properties>
-            <property name="hibernate.ogm.datastore.provider" value="neo4j_embedded" />
-            <property name="hibernate.ogm.datastore.database" value="PLServerDB" />
-            <property name="hibernate.ogm.neo4j.database_path" value="target/test_data_dir" />
+            <!-- noSql Fongodb node-->           
+            <property name="hibernate.ogm.datastore.provider" value="fongodb"/>
+            <property name="hibernate.transaction.jta.platform"
+                  value="org.hibernate.service.jta.platform.internal.JBossStandAloneJtaPlatform"/>
+            
         </properties>
     </persistence-unit>
 </persistence>
