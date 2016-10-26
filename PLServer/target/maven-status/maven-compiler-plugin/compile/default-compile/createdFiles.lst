@@ -1,1 +1,15 @@
+com\vegit\plServer\enums\AccountTypes.class
+com\vegit\plServer\data\access\config\DataAccessConfig.class
+com\vegit\plServer\service\config\ServiceConfig.class
+com\vegit\plServer\data\entities\Address.class
+com\vegit\plServer\data\entities\LeisurePoint.class
+com\vegit\plServer\data\entities\UserAccount.class
+com\vegit\plServer\data\entities\User.class
+com\vegit\plServer\data\access\implementations\AddressDataAccess.class
 com\vegit\plServer\MyResource.class
+com\vegit\plServer\enums\UserTypes.class
+com\vegit\plServer\enums\LeisurePointTypes.class
+com\vegit\plServer\service\implementations\AddressService.class
+com\vegit\plServer\enums\Countries.class
+com\vegit\plServer\data\access\IAddressDataAccess.class
+com\vegit\plServer\service\IAddressService.class

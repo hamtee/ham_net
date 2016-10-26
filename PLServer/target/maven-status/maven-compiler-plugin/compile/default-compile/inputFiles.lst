@@ -1,1 +1,15 @@
+C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\enums\LeisurePointTypes.java
+C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\data\access\config\DataAccessConfig.java
+C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\service\implementations\AddressService.java
+C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\data\entities\LeisurePoint.java
+C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\data\entities\User.java
+C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\service\IAddressService.java
+C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\enums\UserTypes.java
 C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\MyResource.java
+C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\data\access\IAddressDataAccess.java
+C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\enums\AccountTypes.java
+C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\data\entities\UserAccount.java
+C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\data\access\implementations\AddressDataAccess.java
+C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\data\entities\Address.java
+C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\enums\Countries.java
+C:\DEV\workspace\PLServer\src\main\java\com\vegit\plServer\service\config\ServiceConfig.java

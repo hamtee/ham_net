@@ -20,6 +20,65 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            
+            
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.codehaus.mojo</groupId> -->
+<!-- 				<artifactId>aspectj-maven-plugin</artifactId> -->
+<!-- 				<version>1.8</version> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<id>compile</id> -->
+<!-- 						<configuration> -->
+<!-- 							<source>1.8</source> -->
+<!-- 							<target>1.8</target> -->
+<!-- 							<encoding>${project.build.sourceEncoding}</encoding> -->
+<!-- 							<verbose>false</verbose> -->
+<!-- 							<outxml>true</outxml> -->
+<!-- 							<aspectLibraries> -->
+<!-- 								<aspectLibrary> -->
+<!-- 									<groupId>org.springframework</groupId> -->
+<!-- 									<artifactId>spring-aspects</artifactId> -->
+<!-- 								</aspectLibrary> -->
+<!-- 							</aspectLibraries> -->
+<!-- 							<weaveDependencies> -->
+<!-- 								<weaveDependency> -->
+<!-- 									<groupId>org.springframework</groupId> -->
+<!-- 									<artifactId>spring-aspects</artifactId> -->
+<!-- 								</weaveDependency> -->
+<!-- 							</weaveDependencies> -->
+<!-- 						</configuration> -->
+<!-- 						<goals> -->
+<!-- 							<goal>compile</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
+<!-- 					<execution> -->
+<!-- 						<id>test-compile</id> -->
+<!-- 						<configuration> -->
+<!-- 							<source>1.6</source> -->
+<!-- 							<target>1.6</target> -->
+<!-- 							<encoding>${project.build.sourceEncoding}</encoding> -->
+<!-- 							<verbose>false</verbose> -->
+<!-- 							<aspectLibraries> -->
+<!-- 								<aspectLibrary> -->
+<!-- 									<groupId>org.springframework</groupId> -->
+<!-- 									<artifactId>spring-aspects</artifactId> -->
+<!-- 								</aspectLibrary> -->
+<!-- 							</aspectLibraries> -->
+<!-- 							<weaveDependencies> -->
+<!-- 								<weaveDependency> -->
+<!-- 									<groupId>org.springframework</groupId> -->
+<!-- 									<artifactId>spring-aspects</artifactId> -->
+<!-- 								</weaveDependency> -->
+<!-- 							</weaveDependencies> -->
+<!-- 						</configuration> -->
+<!-- 						<goals> -->
+<!-- 							<goal>test-compile</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 			</plugin> -->
+			
         </plugins>
     </build>
     
@@ -35,12 +94,23 @@
             	<scope>import</scope>
         	</dependency>
         	
+			<dependency>
+			    <groupId>org.springframework</groupId>
+			    <artifactId>spring-framework-bom</artifactId>
+			    <version>4.3.3.RELEASE</version>
+			    <type>pom</type>
+            	<scope>import</scope>
+			</dependency>
+        	
+        	
     	</dependencies>
     	
 	</dependencyManagement>
 
     <dependencies>
 
+
+		<!-- JAX RS web services -->
 		<dependency>
             <groupId>javax.ws.rs</groupId>
             <artifactId>javax.ws.rs-api</artifactId>
@@ -77,17 +147,66 @@
 		</dependency>
 		
 		<dependency>
+    		<groupId>com.sun.jersey.contribs</groupId>
+    		<artifactId>jersey-spring</artifactId>
+    		<version>1.19.2</version>
+		</dependency>
+		
+		
+		
+		<!-- Spring Framework Integration -->
+		<dependency>
         <groupId>org.springframework</groupId>
         	<artifactId>spring-webmvc</artifactId>
-        	<version>4.1.0.RELEASE</version>
     	</dependency>
     	
     	<dependency>
         	<groupId>org.springframework</groupId>
         	<artifactId>spring-orm</artifactId>
-        <version>4.1.0.RELEASE</version>
     	</dependency>
     	
+    	<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-context</artifactId>
+		</dependency>
+        
+        <dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-test</artifactId>
+ 		</dependency>
+    	
+    	<dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-aop</artifactId>
+    	</dependency>
+    	
+    	<dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-aspects</artifactId>
+    	</dependency>
+    	
+    	
+    	<!-- Hibernate ORM intergration -->
+    	<dependency>
+    		<groupId>org.hibernate</groupId>
+    		<artifactId>hibernate-core</artifactId>
+    		<version>5.1.0.Final</version>
+		</dependency>
+    	
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-ehcache</artifactId>
+		    <version>5.1.0.Final</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>commons-dbcp</groupId>
+    		<artifactId>commons-dbcp</artifactId>
+    		<version>1.4</version>
+		</dependency>
+		
+    	
+    	<!-- Hibernate OGM intergration -->	
     	<dependency>
         	<groupId>org.hibernate.ogm</groupId>
         	<artifactId>hibernate-ogm-infinispan</artifactId>
@@ -96,7 +215,6 @@
     	<dependency>
     		<groupId>org.hibernate.ogm</groupId>
     		<artifactId>hibernate-ogm-mongodb</artifactId>
-    		<version>5.0.2.Final</version>
 		</dependency>
     	
     	<dependency>
@@ -105,10 +223,21 @@
 		</dependency>
 		
 		<dependency>
+        	<groupId>org.hibernate.ogm</groupId>
+        	<artifactId>hibernate-ogm-neo4j</artifactId>
+    	</dependency>
+    	
+    	<dependency>
+        	<groupId>org.jboss.jbossts</groupId>
+        	<artifactId>jbossjta</artifactId>
+        	 <version>4.16.4.Final</version>
+    	</dependency>
+		
+		<dependency>
     		<groupId>com.github.fakemongo</groupId>
     		<artifactId>fongo</artifactId>
     		<scope>test</scope>
-    		<version>2.0.7</version>
+    		<version>2.0.7</version><!--$NO-MVN-MAN-VER$-->
 		</dependency>
 		
 		<dependency>
@@ -116,12 +245,16 @@
         	<artifactId>jboss-transaction-api_1.2_spec</artifactId>
     	</dependency>
     	
+    	
+    	<!-- Unit Testing -->
         <dependency>
     		<groupId>junit</groupId>
     		<artifactId>junit</artifactId>
-    		<version>4.11</version>
+    		<version>4.12</version>
 		</dependency>
 		
+		
+		<!-- Logging -->	
 		<dependency>
     		<groupId>org.apache.logging.log4j</groupId>
     		<artifactId>log4j-api</artifactId>
@@ -147,6 +280,13 @@
     		<version>1.7.5</version>
     		<scope>test</scope>
 		</dependency>
+		
+		<!-- MySql-Connector -->
+	    <dependency>
+	        <groupId>mysql</groupId>
+	        <artifactId>mysql-connector-java</artifactId>
+	        <version>5.1.39</version>
+	    </dependency>
   		
     </dependencies>
 

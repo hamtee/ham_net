@@ -1,28 +1,37 @@
 package com.vegit.plServer.data.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import org.hibernate.annotations.GenericGenerator;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="ADRESS")
 public class Address {
 	
 	@Id
-	@GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid2")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	
+	@Column(name = "STREET_NUMBER")
 	private long streetNumber;
 	
+	@Column(name = "STREET_NAME")
 	private String streetName;
 	
+	@Column(name = "TOWN")
 	private String town;
 	
+	@Column(name = "COUNTRY")
 	private String country;
 	
 	//Constructor
+	public Address(){
+		
+	}
+	
 	public Address(long streetNumber, String streetName, String town, String country) {
 		this.streetNumber = streetNumber;
 		this.streetName = streetName;
@@ -38,7 +47,7 @@ public class Address {
 	public void setId(long id) {
 		this.id = id;
 	}
-
+	
 	public long getStreetNumber() {
 		return streetNumber;
 	}
